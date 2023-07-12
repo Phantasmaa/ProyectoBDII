@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/index.css'>
+    <title>Transacción</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="style/icons/BPUinvertido.svg" alt="incono">
+        </div>
+        <div class="options">  
+            <div class="opciones">
+                <div class="opcion" >
+                    <a href="index.html">
+                        <p>Actualiza tu información</p>
+                    </a>
+                </div>
+                <div class="opcion" id="opcion-actual">
+                    <!--<a href="transaccion.html">-->
+                        <p>Realiza una transacción</p>
+                    <!--</a>                   -->
+                </div>
+                <div class="opcion">
+                    <p>Consulta estado de cuenta</p>
+                </div>
+            </div>
+            <div class="linea-guia">
+                <div class="indicador-otro"></div>
+                <div class="linea"></div>
+                <div class="indicador-actual"></div>
+                <div class="linea"></div>
+                <div class="indicador-otro"></div>
+            </div>
+        </div>
+    </div>
+    <div class="contenido">
+        <div class="contenido-box">
+            <div class="transaccion-opc" id="opciones">
+                <button button class="opc" onclick="mostrarTarjeta(1)">
+                    <h2>Realiza un depósito</h2>
+                    <img src="style/icons/transferenciaIcono.svg" alt="transferencia">
+                </button>
+                    
+                <button class="opc" onclick="mostrarTarjeta(2)">
+                    <h2>Realiza un préstamo</h2>
+                    <img src="style/icons/PrestamoIcono.svg" alt="Prestamo">
+                </button>
+            </div>
+            <div id="tarjeta1" class="datos-tarjeta" style="display: none;">
+                <h2>Datos de la tarjeta de crédito</h2>
+                <form action="" class="login">
+                    <div class="campo">
+                        <label for="nombre-titular">Nombre del titular:</label>
+                        <input type="text" id="nombre-titular" name="nombre-titular" placeholder="Ingrese el nombre del titular" required>
+                    </div>
+                    <div class="campo">
+                        <label for="numero-tarjeta">Número de tarjeta:</label>
+                        <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="Ingrese el número de tarjeta" required>
+                    </div>
+                    <div class="campo">
+                        <label for="fecha-expiracion">Fecha de expiración:</label>
+                        <input type="text" id="fecha-expiracion" name="fecha-expiracion" placeholder="MM/AA" required>
+                    </div>
+                    <div class="campo">
+                        <label for="codigo-seguridad">Código de seguridad:</label>
+                        <input type="text" id="codigo-seguridad" name="codigo-seguridad" placeholder="Ingrese el código de seguridad" required>
+                    </div>
+                    <input type="submit" value="ENVIAR" id="iniciar">
+                </form>
+            </div>
+            <div id="tarjeta2" class="datos-tarjeta" style="display: none;">
+                <h2>Realizar un préstamo</h2>
+                <form action="" class="login">
+                    <p class="campo">Llene los campos</p>
+                    <div class="campo">
+                        <label for="nombre-titular">Monto:</label>
+                        <input type="text" id="nombre-titular" name="nombre-titular" placeholder="Ingrese el monto deseado" required>
+                    </div>
+                    <div class="campo">
+                        <label for="numero-tarjeta">Número de cuotas:</label>
+                        <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="Ingrese el número de cuotas" required>
+                    </div>
+                    <div class="campo">
+                        <label for="codigo-seguridad">Código de seguridad:</label>
+                        <input type="text" id="codigo-seguridad" name="codigo-seguridad" placeholder="Ingrese el código de seguridad" required>
+                    </div>
+                    <div class="campo">
+                        <label for="fecha-expiracion">Interés generado:</label>
+                        <input type="text" id="fecha-expiracion" name="fecha-expiracion" placeholder="MM/AA" required>
+                    </div>
+                    
+                    <input type="submit" value="ENVIAR" id="iniciar">
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>
+    <script>
+        function mostrarTarjeta(numTarjeta) {
+            var tarjeta1 = document.getElementById("tarjeta1");
+            var tarjeta2 = document.getElementById("tarjeta2");
+            var opciones = document.getElementById("opciones");
+    
+            if (numTarjeta === 1) {
+                tarjeta1.style.display = "flex";
+                tarjeta2.style.display = "none";
+            } else if (numTarjeta === 2) {
+                tarjeta1.style.display = "none";
+                tarjeta2.style.display = "flex";
+            }
+    
+            opciones.style.display = "none";
+        }
+    </script>
+</body>
+</html>

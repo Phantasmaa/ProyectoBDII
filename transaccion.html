@@ -20,12 +20,12 @@
                     </a>
                 </div>
                 <div class="opcion" id="opcion-actual">
-                    <!--<a href="transaccion.html">-->
                         <p>Realiza una transacción</p>
-                    <!--</a>                   -->
                 </div>
                 <div class="opcion">
-                    <p>Consulta estado de cuenta</p>
+                    <a href="estadoDeCuenta.html">
+                        <p>Consulta estado de cuenta</p>
+                    </a>                    
                 </div>
             </div>
             <div class="linea-guia">
@@ -60,6 +60,10 @@
                     <div class="campo">
                         <label for="numero-tarjeta">Número de tarjeta:</label>
                         <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="Ingrese el número de tarjeta" required>
+                    </div>
+                    <div class="campo">
+                        <label for="Monto">Monto:</label>
+                        <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="Ingrese el monto" required>
                     </div>
                     <div class="campo">
                         <label for="fecha-expiracion">Fecha de expiración:</label>
@@ -100,22 +104,7 @@
         </div>
         
     </div>
-    <script>
-        function mostrarTarjeta(numTarjeta) {
-            var tarjeta1 = document.getElementById("tarjeta1");
-            var tarjeta2 = document.getElementById("tarjeta2");
-            var opciones = document.getElementById("opciones");
-    
-            if (numTarjeta === 1) {
-                tarjeta1.style.display = "flex";
-                tarjeta2.style.display = "none";
-            } else if (numTarjeta === 2) {
-                tarjeta1.style.display = "none";
-                tarjeta2.style.display = "flex";
-            }
-    
-            opciones.style.display = "none";
-        }
+    <script src="js/transaccion.js"> 
     </script>
 </body>
 </html>

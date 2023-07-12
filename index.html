@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/index.css'>
-    <title>Actualiza tus datos</title>
+    <title>Transacción</title>
 </head>
 <body>
     <div class="header">
@@ -14,13 +14,20 @@
         </div>
         <div class="options">  
             <div class="opciones">
-                <div class="opcion" id="opcion-actual">
-                        <p>Actualiza tu información</p>
+                <div class="opcion"  id="opcion-actual" id="homeopc">
+                    <div id="home">
+                        <img src="style/icons/Home.svg">
+                    </div>
                 </div>
-                <div class="opcion">
-                    <a href="transaccion.html">
-                        <p>Realiza una transacción</p>
-                    </a>                    
+                <div class="opcion" >
+                    <a href="actualizarInfo.html" >
+                        <p>Actualiza tu información</p>
+                    </a>
+                </div>
+                <div class="opcion" >
+                    <a href="transaccion.html" >
+                        <p>Realiza una transacción</p> 
+                    </a>              
                 </div>
                 <div class="opcion">
                     <a href="estadoDeCuenta.html">
@@ -34,65 +41,29 @@
                 <div class="indicador-otro"></div>
                 <div class="linea"></div>
                 <div class="indicador-otro"></div>
+                <div class="linea"></div>
+                <div class="indicador-otro"></div>
             </div>
         </div>
     </div>
     <div class="contenido">
         <div class="contenido-box">
-            <div class="datos-obtenidos">
-                <h2>Datos Obtenidos</h2>
-                <div class="dato">
-                    <div class="nombre-dato">Nombres:</div>
-                    <div class="datoNeto"></div>    
-                </div>
-                <div class="dato">
-                    <div class="nombre-dato">DNI:</div>
-                    <div class="datoNeto"></div>    
-                </div>
-                <div class="dato">
-                    <div class="nombre-dato">Correo:</div>
-                    <div class="datoNeto"></div>    
-                </div>
-                <div class="dato">
-                    <div class="nombre-dato">Teléfono:</div>
-                    <div class="datoNeto"></div>    
-                </div>
-                <div class="dato">
-                    <div class="nombre-dato">Dirección:</div>
-                    <div class="datoNeto"></div>    
-                </div>
-                <div class="dato">
-                    <div class="nombre-dato">Nacimiento:</div>
-                    <div class="datoNeto"></div>    
-                </div>
-            </div>
-            <div class="datos-actualizables">
-                <h2>Datos actualizables</h2>
-                <form action="" class="login">
-                    <div class="campo">
-                      <label for="DNI">DNI:</label>
-                      <input type="text" id="dni" name="dni" placeholder="Ingrese su DNI" required>
-                    </div>
-                    <div class="campo">
-                      <label for="correo">Correo:</label>
-                      <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
-                    </div>
-                    <div class="campo">
-                      <label for="telefono">Teléfono:</label>
-                      <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required>
-                    </div>
-                    <div class="campo">
-                      <label for="direccion">Dirección:</label>
-                      <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección" required>
-                    </div>
-                    <div class="campo">
-                      <label for="nacimiento">Fecha de Nacimiento:</label>
-                      <input type="date" id="nacimiento" name="nacimiento" required>
-                    </div>
-                    <input type="submit" value="INGRESAR" id="iniciar">
-                  </form>
-                  
-            </div>
+            <div class="transaccion-opc" id="opciones">
+                <button button class="opc" id="inicio">
+                    <h2>Actualiza tu información</h2>
+                    <img src="style/icons/actualizar.svg" alt="transferencia">
+                </button>
+                    
+                <button class="opc" id="inicio">
+                    <h2>Realiza una transacción</h2>
+                    <img src="style/icons/transaccion.svg" alt="Prestamo">
+                </button>
+ 
+                <button class="opc" id="inicio">
+                    <h2>Consulta tu estado de cuenta</h2>
+                    <img src="style/icons/estadoCuenta.svg" alt="Prestamo">
+                </button>
+            </div>           
         </div>
         
     </div>

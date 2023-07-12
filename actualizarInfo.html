@@ -21,55 +21,86 @@
                         </a>
                     </div>
                 </div>
-                <div class="opcion" >
-                    <a href="actualizarInfo.html">
+                <div class="opcion" id="opcion-actual">
                         <p>Actualiza tu información</p>
-                    </a>
                 </div>
                 <div class="opcion">
                     <a href="transaccion.html">
                         <p>Realiza una transacción</p>
                     </a>                    
                 </div>
-                <div class="opcion" id="opcion-actual">
+                <div class="opcion">
+                    <a href="estadoDeCuenta.html">
                         <p>Consulta estado de cuenta</p>
+                    </a>
                 </div>
             </div>
             <div class="linea-guia">
                 <div class="indicador-otro"></div>
                 <div class="linea"></div>
-                <div class="indicador-otro"></div>
-                <div class="linea"></div>
-                <div class="indicador-otro"></div>
-                <div class="linea"></div>
                 <div class="indicador-actual"></div>
+                <div class="linea"></div>
+                <div class="indicador-otro"></div>
+                <div class="linea"></div>
+                <div class="indicador-otro"></div>
             </div>
         </div>
     </div>
     <div class="contenido">
         <div class="contenido-box">
             <div class="datos-obtenidos">
-                <h2>Estado de cuenta</h2>
+                <h2>Datos Obtenidos</h2>
                 <div class="dato">
-                    <div class="nombre-dato">Nro cuenta:</div>
+                    <div class="nombre-dato">Nombres:</div>
                     <div class="datoNeto"></div>    
                 </div>
                 <div class="dato">
-                    <div class="nombre-dato">Titular:</div>
+                    <div class="nombre-dato">DNI:</div>
                     <div class="datoNeto"></div>    
                 </div>
                 <div class="dato">
-                    <div class="nombre-dato">Ultimo egreso:</div>
+                    <div class="nombre-dato">Correo:</div>
                     <div class="datoNeto"></div>    
                 </div>
                 <div class="dato">
-                    <div class="nombre-dato">Ultimo ingreso:</div>
+                    <div class="nombre-dato">Teléfono:</div>
                     <div class="datoNeto"></div>    
                 </div>
                 <div class="dato">
-                    <div class="nombre-dato">Deudas:</div>
+                    <div class="nombre-dato">Dirección:</div>
                     <div class="datoNeto"></div>    
                 </div>
+                <div class="dato">
+                    <div class="nombre-dato">Nacimiento:</div>
+                    <div class="datoNeto"></div>    
+                </div>
+            </div>
+            <div class="datos-actualizables">
+                <h2>Datos actualizables</h2>
+                <form action="" class="login">
+                    <div class="campo">
+                      <label for="DNI">DNI:</label>
+                      <input type="text" id="dni" name="dni" placeholder="Ingrese su DNI" required>
+                    </div>
+                    <div class="campo">
+                      <label for="correo">Correo:</label>
+                      <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
+                    </div>
+                    <div class="campo">
+                      <label for="telefono">Teléfono:</label>
+                      <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required>
+                    </div>
+                    <div class="campo">
+                      <label for="direccion">Dirección:</label>
+                      <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección" required>
+                    </div>
+                    <div class="campo">
+                      <label for="nacimiento">Fecha de Nacimiento:</label>
+                      <input type="date" id="nacimiento" name="nacimiento" required>
+                    </div>
+                    <input type="submit" value="INGRESAR" id="iniciar">
+                  </form>
+                  
             </div>
         </div>
         

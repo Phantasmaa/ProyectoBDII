@@ -1,10 +1,24 @@
-$servername = 'nombre_del_servidor';
-$database = 'BancoBPU';
-$username = 'nombre_de_usuario';
-$password = 'contraseña';
+<?php
+require 'settings.php';
+class connection{
+    private $conector = null;
 
-try {
-  $conn = new PDO("sqlsrv:Server=$servername;Database=$database", $username, $password);
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-  echo "Error de conexión: " . $e->getMessage();
+    public function getConection()
+    {
+        $this->conector = new PDO("sqlsrv:server=".SERVIDOR.";database=".DATABASE,USUARIO,PASSWORD);
+
+        return $this->conector;
+    }
+}
+
+$con = new connection();
+if($con->getConection() != null){
+   echo "Conexion exitosa";
+}
+else
+{
+    echo "Error al conectarse a la base de datos";
+} 
+
+
+?>

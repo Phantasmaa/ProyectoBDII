@@ -59,6 +59,10 @@ a {
     color: #FFF;
     border-radius: 1rem;
     cursor: pointer;
+    transition: transform .2s;
+}
+#tarjeta0:hover{
+    transform: scale(1.1);
 }
 .logout p{
     color: #371B72;
@@ -290,10 +294,13 @@ a {
     height: 4rem;
     width: auto;
     padding-right: 1rem;
-    background: #371B72;
+    background-color: #371B72;
     color: #D6D6D6;
     font-size: 1.5rem;
     cursor: pointer;
+}
+#iniciar:hover{
+    background-color: #2d165f;
 }
 
 .login input::placeholder {

@@ -92,7 +92,7 @@
                     </div>
                     <div class="campo">
                       <label for="telefono">Teléfono:</label>
-                      <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required>
+                      <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" maxlength="9" oninput="restrictInput(event, /^\d{0,9}$/)" required>
                     </div>
                     <div class="campo">
                       <label for="direccion">Dirección:</label>
@@ -109,5 +109,12 @@
         </div>
         
     </div>
+    <script>
+        const fechaActual = new Date();
+        fechaActual.setFullYear(fechaActual.getFullYear() - 18);
+        const fechaMaxima = fechaActual.toISOString().split('T')[0];
+        const campoFecha = document.getElementById('nacimiento');
+        campoFecha.setAttribute('max', fechaMaxima);
+    </script>
 </body>
 </html>

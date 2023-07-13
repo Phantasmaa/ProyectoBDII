@@ -74,6 +74,7 @@ a {
 }
 #home:hover{
     transform: scale(1.2);
+
 }
 .indicador{
     display: flex;
@@ -290,7 +291,7 @@ a {
 }
 #inicio{
     width: 30%;
-    background-color: #242323;
+    background-color: #371B72;
 }
 #homeopc{
     border:3px solid rgb(211, 52, 52);

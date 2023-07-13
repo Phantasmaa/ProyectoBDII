@@ -21,7 +21,7 @@
                     <label for="username">
                         <img src="style/icons/dni.svg">
                     </label>
-                    <input type="text" id="username" name="username" placeholder="INGRESE SU DNI" required>
+                    <input type="text" id="username" name="username" placeholder="INGRESE SU DNI" maxlength="8" oninput="restrictInput(event, /^\d{0,8}$/)" required>
                 </div>
                 <div class="descripcion">
                     <p>Debe contener 8 dígitos</p>
@@ -30,17 +30,26 @@
                     <label for="password">
                         <img src="style/icons/lock.svg">
                     </label>
-                    <input type="password" id="password" name="password" placeholder="INGRESE SU CONTRASEÑA" required>
+                    <input type="password" id="password" name="password" placeholder="INGRESE SU CONTRASEÑA" maxlength="5" oninput="restrictInput(event, /^.{0,5}$/)" required>
                 </div>
                 <div class="descripcion">
                     <p>Debe contener 5 caracteres</p>
                 </div>
                 
-                
                 <input type="submit" value="INGRESAR" id="iniciar">
             </form>
+            
         </div>
 
     </div>
+    <script>
+        function restrictInput(event, pattern) {
+            const input = event.target;
+            const value = input.value;
+            if (!pattern.test(value)) {
+                input.value = value.slice(0, -1);
+            }
+        }
+    </script>
 </body>
 </html>

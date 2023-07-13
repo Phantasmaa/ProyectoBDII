@@ -75,20 +75,21 @@
                         <input type="text" id="nombre-titular" name="nombre-titular" placeholder="Ingrese el nombre del titular" required>
                     </div>
                     <div class="campo">
-                        <label for="numero-tarjeta">Número de tarjeta:</label>
-                        <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="Ingrese el número de tarjeta" required>
+                        <label for="numero-tarjeta-deposito">Número de tarjeta:</label>
+                        <input type="text" id="numero-tarjeta-deposito" name="numero-tarjeta-deposito" placeholder="Ingrese el número de tarjeta" maxlength="16" oninput="restrictInput(event, /^\d{0,16}$/)" required>
+
                     </div>
                     <div class="campo">
                         <label for="Monto">Monto:</label>
                         <input type="text" id="monto" name="monto" placeholder="Ingrese el monto" required>
                     </div>
                     <div class="campo">
-                        <label for="fecha-expiracion">Fecha de expiración:</label>
-                        <input type="text" id="fecha-expiracion" name="fecha-expiracion" placeholder="MM/AA" required>
+                        <label for="numero-tarjeta-propio">Número de tarjeta propia:</label>
+                        <input type="text" id="numero-tarjeta-propio" name="numero-tarjeta-propio" placeholder="Ingrese su número de tarjeta" maxlength="16" oninput="restrictInput(event, /^\d{0,16}$/)" required>
                     </div>
                     <div class="campo">
                         <label for="codigo-seguridad">Código de seguridad:</label>
-                        <input type="text" id="codigo-seguridad" name="codigo-seguridad" placeholder="Ingrese el código de seguridad" required>
+                        <input type="text" id="codigo-seguridad" name="codigo-seguridad" placeholder="Ingrese el código de seguridad" maxlength="3" oninput="restrictInput(event, /^\d{0,3}$/)" required>
                     </div>
                     <input type="submit" value="Depositar" id="iniciar">
                 </form>
@@ -103,15 +104,15 @@
                     </div>
                     <div class="campo">
                         <label for="numero-cuotas">Número de cuotas:</label>
-                        <input type="text" id="numero-cuotas" name="numero-cuotas" placeholder="Ingrese el número de cuotas" required>
+                        <input type="text" id="numero-cuotas" name="numero-cuotas" placeholder="Máximo(20)" oninput="restrictMaxCuotas(event, 20); calcularInteres()" required>
                     </div>
                     <div class="campo">
                         <label for="codigo-seguridad">Código de seguridad:</label>
-                        <input type="password" id="codigo-seguridad" name="codigo-seguridad" placeholder="Ingrese el código de seguridad" required>
+                        <input type="text" id="codigo-seguridad" name="codigo-seguridad" placeholder="Ingrese el código de seguridad" maxlength="3" oninput="restrictInput(event, /^\d{0,3}$/)" required>
                     </div>
                     <div class="campo">
                         <label for="interes">Interés generado:</label>
-                        <input type="text" id="interes" name="interes" placeholder="MM/AA" readonly>
+                        <input type="text" id="interes" name="interes" placeholder="" readonly>
                     </div>
                     
                     <input type="submit" value="Pedir préstamo" id="iniciar">
@@ -121,7 +122,7 @@
         </div>
         
     </div>
-    <script src="js/transaccion.js"> 
-    </script>
+    <script src="js/transaccion.js" ></script>
+    <script src="js/consistenciaDatos.js"></script>
 </body>
 </html>

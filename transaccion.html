@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class="contenido">
-        <div class="contenido-box">
+        <div id="procesoContainer">
             <div class="transaccion-opc" id="opciones">
                 <button button class="opc" onclick="mostrarTarjeta(1)">
                     <h2>Realiza un depósito</h2>
@@ -62,6 +62,10 @@
                     <h2>Realiza un préstamo</h2>
                     <img src="style/icons/PrestamoIcono.svg" alt="Prestamo">
                 </button>
+            </div>
+            
+            <div id="tarjeta0"  style="display: none;" onclick="mostrarTarjeta(0)">
+                Salir
             </div>
             <div id="tarjeta1" class="datos-tarjeta" style="display: none;">
                 <h2>Datos de la tarjeta de crédito</h2>

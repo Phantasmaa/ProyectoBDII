@@ -1,8 +1,15 @@
+<?php
+require 'settings.php';
 require_once 'db_conection.php';
 
-//SE debe obtener primero el DNI del cliente (Falta)
 
-$DNI_cliente = "12345678"; // Ejemplo: asigna el DNI del cliente
+if (isset($_SESSION['dni'])) {
+  $DNI_cliente = $_SESSION['dni']; 
+} else {
+  
+  header('Location: login.html');
+  exit();
+}
 
 try {
   // Obtener información del estado de cuenta del cliente
@@ -38,3 +45,4 @@ try {
 } catch (PDOException $e) {
   echo "Error de consulta: " . $e->getMessage();
 }
+?>

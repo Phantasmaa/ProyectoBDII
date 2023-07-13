@@ -78,5 +78,27 @@
         </div>
         
     </div>
+    <script>
+    // Realiza una solicitud AJAX al archivo PHP para obtener los datos del estado de cuenta
+    function obtenerEstadoCuenta() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                // Actualiza los elementos HTML con los datos obtenidos
+                document.querySelector('.datoNeto:nth-of-type(1)').textContent = response.nro_cuenta;
+                document.querySelector('.datoNeto:nth-of-type(2)').textContent = response.titular;
+                document.querySelector('.datoNeto:nth-of-type(3)').textContent = response.ultimo_egreso;
+                document.querySelector('.datoNeto:nth-of-type(4)').textContent = response.ultimo_ingreso;
+                document.querySelector('.datoNeto:nth-of-type(5)').textContent = response.deudas;
+            }
+        };
+        xhr.open('GET', 'consulta_estado_cuenta.php', true);
+        xhr.send();
+    }
+
+    // Llama a la función para obtener el estado de cuenta al cargar la página
+    obtenerEstadoCuenta();
+    </script>
 </body>
 </html>
